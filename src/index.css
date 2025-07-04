@@ -1,0 +1,93 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 120 20% 98%;
+    --foreground: 30 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 20% 15%;
+
+    --primary: 95 60% 45%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 45 25% 85%;
+    --secondary-foreground: 30 20% 15%;
+
+    --muted: 45 15% 92%;
+    --muted-foreground: 30 10% 45%;
+
+    --accent: 35 45% 70%;
+    --accent-foreground: 30 20% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 45 20% 85%;
+    --input: 45 20% 85%;
+    --ring: 95 60% 45%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 30 15% 8%;
+    --foreground: 45 20% 92%;
+
+    --card: 30 15% 12%;
+    --card-foreground: 45 20% 92%;
+
+    --popover: 30 15% 12%;
+    --popover-foreground: 45 20% 92%;
+
+    --primary: 95 50% 55%;
+    --primary-foreground: 30 15% 8%;
+
+    --secondary: 30 10% 20%;
+    --secondary-foreground: 45 20% 92%;
+
+    --muted: 30 10% 18%;
+    --muted-foreground: 45 10% 65%;
+
+    --accent: 35 35% 40%;
+    --accent-foreground: 45 20% 92%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 10% 20%;
+    --input: 30 10% 20%;
+    --ring: 95 50% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-earth {
+    background: linear-gradient(135deg, #f0fdf0 0%, #dcfcdc 50%, #e6d9c1 100%);
+  }
+  
+  .gradient-soil {
+    background: linear-gradient(135deg, #8a5f39 0%, #b4884f 50%, #d4bf97 100%);
+  }
+}
